@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@Namanvicky 
-Shraddha08-cmyk
-/
-React-Drum-Machine---Placecom-Frontend-Contest-02-03-2023---kimp56m5poz1
-Public
-generated from Newton-School/drum-machine-boilerplate
-Fork your own copy of Shraddha08-cmyk/React-Drum-Machine---Placecom-Frontend-Contest-02-03-2023---kimp56m5poz1
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-React-Drum-Machine---Placecom-Frontend-Contest-02-03-2023---kimp56m5poz1/src/components/App.js /
-@Shraddha08-cmyk
-Shraddha08-cmyk Update App.js
-Latest commit 9434ed9 3 weeks ago
- History
- 1 contributor
-92 lines (85 sloc)  2.08 KB
-
 import React, { useState } from "react";
 import "../styles/App.css";
 import Pads from "./Pads";
@@ -120,18 +90,3 @@ function App() {
 }
 
 export default App;
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-React-Drum-Machine---Placecom-Frontend-Contest-02-03-2023---kimp56m5poz1/App.js at main · Shraddha08-cmyk/React-Drum-Machine---Placecom-Frontend-Contest-02-03-2023---kimp56m5poz1
