@@ -1,33 +1,32 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
+import Pad from "./Pad";
 import { bank1 } from "./App";
 
-function Pad({ handleClick, power, backgroundStyle, element, id }) {
-  const audio = new Audio(bank1[element].source);
+function Pads({ power }) {
+  const keypadCode = Object.keys(bank1);
+  const [audioName, setAudioName] = useState(null);
 
-  window.addEventListener("keydown", (event) => {
-    if (event.key === element || event.key === element.toLowerCase()) {
-      handleClick(bank1[element]);
-      audio.play();
-    }
-  });
+  const playSound = (e) => {
+    setAudioName(e.name);
+  };
 
   return (
-    <button
-      data-tag={id}
-      type="button"
-      className="drum-pad"
-      onClick={() => {
-        audio.play();
-        handleClick(bank1[element]);
-      }}
-      id={bank1[element]}
-      disabled={!power}
-      style={{ background: `${backgroundStyle}` }}
-    >
-      {element}
-      <audio id={element} src={bank1[element].source} className="clip"></audio>
-    </button>
+    <div id="div-pads">
+      {keypadCode.map((pad, idx) => {
+        // console.log(pad + idx);
+        return (
+          <Pad
+            id={pad + idx}
+            key={pad + idx}
+            handleClick={playSound}
+            element={pad}
+            power={power}
+          />
+        );
+      })}
+      <div id="display"> {audioName} </div>
+    </div>
   );
 }
 
-export default Pad;
+export default Pads;
